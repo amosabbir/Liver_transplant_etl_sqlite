@@ -44,3 +44,28 @@ The schema is designed to support longitudinal clinical data and transplant even
 * Event-based structure
   * Transplants and labs modeled as time-dependent events
 
+### ETL Pipeline
+
+The ETL pipeline is implemented in Python using pandas and is structured into three stages:
+
+1. Extract
+    * EPIC (Oracle extracts)
+    * REDCap exports
+    * Excel files
+2. Transform
+    * Standardize column names and formats
+    * Clean and normalize lab values
+    * Convert wide → long format for labs
+    * Deduplicate records using exact-match keys
+    * Parse timestamps and derive dates
+
+3. Load
+    * Insert into SQLite with foreign key relationships
+    * Append-only design for longitudinal tracking
+
+
+
+
+
+
+
