@@ -21,6 +21,7 @@ The schema is designed to support longitudinal clinical data and transplant even
 
 ### Core Tables
 
+
 * patients — unique individuals (recipients and living donors)
 * transplants — transplant events (linked to patients and donors)
 * donors — donor information (living or deceased)
