@@ -6,17 +6,13 @@ A lightweight clinical data warehouse built in SQLite with a Python ETL pipeline
 
 This project demonstrates end-to-end data engineering: schema design, ETL processing, and analytical querying on real-world clinical data structures.
 
-
+```
 EPIC (Oracle) ─┐
-
-              ├── Python ETL (pandas) ─── SQLite Database ─── SQL Queries / Analysis
-
+               ├──> Python ETL (pandas) ───> SQLite Database ───> SQL Queries / Analysis
 REDCap ────────┤
-
 Excel ─────────┘
-
 PDF docs ──────┘                     
-
+```
 
 
 ### Data Model
@@ -105,3 +101,33 @@ FROM labs
 GROUP BY patient_id, analyte, date_of_lab;
 ```
 
+
+
+### Dataset Summary (Sample)
+
+This repository includes a de-identified sample dataset:
+
+* Patients: ~1,000
+* Transplants: ~1,200
+* Labs: ~50,000 rows
+
+The sample preserves schema and query patterns while reducing size for portability.
+
+
+### Data Privacy
+
+All data in this repository is synthetic or de-identified and does not contain protected health information (PHI).
+Identifiers have been removed or replaced, and dates may be shifted while preserving temporal relationships for analysis.
+
+
+### Repository Structure
+
+```
+.
+├── data/                # De-identified SQLite database
+├── etl/                 # ETL scripts (extract, transform, load)
+├── schema/              # Schema definition and diagram
+├── queries/             # Example SQL queries
+├── README.md
+└── requirements.txt
+``` 
