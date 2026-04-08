@@ -44,6 +44,8 @@ The schema is designed to support longitudinal clinical data and transplant even
 * Event-based structure
   * Transplants and labs modeled as time-dependent events
 
+
+
 ### ETL Pipeline
 
 The ETL pipeline is implemented in Python using pandas and is structured into three stages:
@@ -65,7 +67,41 @@ The ETL pipeline is implemented in Python using pandas and is structured into th
 
 
 
+### Handling Unstructured Data (PDF)
+
+An OCR-based ETL step is included to extract laboratory values from synthetic clinical PDF reports and convert them into structured rows within the labs table.
+This demonstrates integration of unstructured clinical data into the warehouse.
 
 
 
+
+### Example Queries
+
+1. Latest labs before transplant
+
+```sql
+SELECT l.patient_id, l.analyte, l.value, l.timestamp_of_lab
+FROM labs l
+JOIN transplants t ON l.patient_id = t.patient_id
+WHERE l.timestamp_of_lab <= t.transplant_date
+ORDER BY l.patient_id, l.analyte, l.timestamp_of_lab DESC;
+```
+
+
+2. Donor–recipient linkage
+
+```sql
+SELECT t.transplant_id, p.patient_id, d.donor_id, t.tx_graft_type
+FROM transplants t
+JOIN patients p ON t.patient_id = p.patient_id
+LEFT JOIN donors d ON t.donor_id = d.donor_id;
+```
+
+3. Lab trends over time
+
+```sql
+SELECT patient_id, analyte, date_of_lab, AVG(value) as avg_value
+FROM labs
+GROUP BY patient_id, analyte, date_of_lab;
+```
 
