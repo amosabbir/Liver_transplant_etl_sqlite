@@ -15,7 +15,7 @@ PDF docs ──────┘
 ```
 
 
-### Data Model
+## Data Model
 
 The schema is designed to support longitudinal clinical data and transplant events.
 
@@ -42,7 +42,7 @@ The schema is designed to support longitudinal clinical data and transplant even
 
 
 
-### ETL Pipeline
+## ETL Pipeline
 
 The ETL pipeline is implemented in Python using pandas and is structured into three stages:
 
@@ -71,7 +71,7 @@ This demonstrates integration of unstructured clinical data into the warehouse.
 
 
 
-### Example Queries
+## Example Queries
 
 1. Latest labs before transplant
 
@@ -103,7 +103,7 @@ GROUP BY patient_id, analyte, date_of_lab;
 
 
 
-### Dataset Summary (Sample)
+## Dataset Summary (Sample)
 
 This repository includes a de-identified sample dataset:
 
@@ -113,14 +113,13 @@ This repository includes a de-identified sample dataset:
 
 The sample preserves schema and query patterns while reducing size for portability.
 
-
 ### Data Privacy
 
 All data in this repository is synthetic or de-identified and does not contain protected health information (PHI).
 Identifiers have been removed or replaced, and dates may be shifted while preserving temporal relationships for analysis.
 
 
-### Repository Structure
+## Repository Structure
 
 ```
 .
@@ -131,3 +130,11 @@ Identifiers have been removed or replaced, and dates may be shifted while preser
 ├── README.md
 └── requirements.txt
 ``` 
+
+
+## Key Takeaways
+* Designed a clinical data warehouse for longitudinal patient data
+* Built a modular ETL pipeline for messy, multi-source healthcare data
+* Modeled time-series lab data for flexible analysis
+* Integrated structured and unstructured data into a unified system
+
