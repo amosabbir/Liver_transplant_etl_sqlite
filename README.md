@@ -22,12 +22,12 @@ The schema is designed to support longitudinal clinical data and transplant even
 ### Core Tables
 
 
-* patients — unique individuals (recipients and living donors)
-* transplants — transplant events (linked to patients and donors)
-* donors — donor information (living or deceased)
-* labs — long-format laboratory data (time-series)
-* recipient_demo — demographic extension (1:1 with patients)
-* notes — optional unstructured clinical notes
+* patients: unique individuals (recipients and living donors)
+* transplants: transplant events (linked to patients and donors)
+* donors: donor information (living or deceased)
+* labs: long-format laboratory data (time-series)
+* recipient_demo: demographic extension (1:1 with patients)
+* notes: optional unstructured clinical notes
 
 ### Key Design Decisions
 * Surrogate keys (patient_id, transplant_id, donor_id)
