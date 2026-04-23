@@ -8,9 +8,7 @@ This project demonstrates end-to-end data engineering: schema design, ETL proces
 
 ```
 EPIC (Oracle) ─┐
-               ├──> Python ETL (pandas) ───> SQLite Database ───> SQL Queries / Analysis
-REDCap ────────┤
-Excel ─────────┘
+REDCap ────────├──> Python ETL (pandas) ───> SQLite Database ───> SQL Queries / Analysis
 PDF docs ──────┘                     
 ```
 
@@ -74,16 +72,41 @@ This demonstrates integration of unstructured clinical data into the warehouse.
 
 ## Example Queries
 
-1. Latest labs before transplant
+1. Latest Lab Value per Patient (Window Function)
+
+Returns the most recent lab value for each analyte per patient using a window function.
+This is a common BI pattern for generating a current clinical snapshot or preparing features for downstream analysis.
 
 ```sql
-SELECT l.patient_id, l.analyte, l.value, l.timestamp_of_lab
-FROM labs l
-JOIN transplants t ON l.patient_id = t.patient_id
-WHERE l.timestamp_of_lab <= t.transplant_date
-ORDER BY l.patient_id, l.analyte, l.timestamp_of_lab DESC;
+SELECT patient_id,
+       analyte,
+       analyte_value AS latest_value,
+       date_of_lab AS latest_date
+FROM (
+    SELECT patient_id,
+           analyte,
+           analyte_value,
+           date_of_lab,
+           ROW_NUMBER() OVER (
+               PARTITION BY patient_id, analyte
+               ORDER BY date_of_lab DESC
+           ) AS rn
+    FROM labs
+)
+WHERE rn = 1
+ORDER BY patient_id, analyte
+LIMIT 15;
 ```
+Example Output (truncated):
+Showing a subset of patients and analytes for readability.
 
+<img width="603" height="440" alt="Query_1" src="https://github.com/user-attachments/assets/bd68021c-0ca2-4200-8205-335d90e8f21f" />
+
+### Why this matters
+Identifies most recent clinical values per patient
+Handles longitudinal lab data efficiently
+Demonstrates use of window functions, a key SQL skill in analytics and BI
+Forms the basis for dashboards, cohort definitions, and ML feature engineering
 
 2. Donor–recipient linkage
 
