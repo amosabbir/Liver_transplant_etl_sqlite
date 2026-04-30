@@ -33,6 +33,7 @@ The schema is designed to support longitudinal clinical data and transplant even
 
 <img width="1032" height="807" alt="schema_diagram" src="https://github.com/user-attachments/assets/02e8341a-8746-4f83-aac1-4366463112b4" />
 
+The schema separates patients, transplant events, donors, demographics, and longitudinal labs to support flexible clinical analytics.
 
 ### Key Design Decisions
 * Surrogate keys (patient_id, transplant_id, donor_id)
