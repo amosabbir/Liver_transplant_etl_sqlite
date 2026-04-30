@@ -102,7 +102,7 @@ Showing a subset of patients and analytes for readability.
 
 <img width="603" height="440" alt="Query_1" src="https://github.com/user-attachments/assets/bd68021c-0ca2-4200-8205-335d90e8f21f" />
 
-### Why this matters
+### Use Case
 Identifies most recent clinical values per patient.
 Handles longitudinal lab data efficiently.
 Demonstrates use of window functions, a key SQL skill in analytics and BI.
@@ -129,7 +129,7 @@ LIMIT 5;
 Example Output:
 <img width="1019" height="156" alt="image" src="https://github.com/user-attachments/assets/b05b74de-e5d8-4230-ac2c-5ab374ac9719" />
 
-### Why this matters
+### Use Case
 Validates donor-recipient linkage across tables
 Shows PDF-derived donor data integrated into SQL
 Demonstrates normalized schema design with surrogate keys
@@ -149,10 +149,33 @@ Example Output:
 <img width="678" height="325" alt="Query_3" src="https://github.com/user-attachments/assets/902f4aaf-8955-4d7e-a66d-1c3187322b9c" />
 
 
-### Why this matters
-Summarizes transplant activity by donor/graft category.
-Supports operational dashboards.
-Demonstrates grouped SQL aggregation for BI reporting.
+### Use Case
+Supports operational reporting of transplant activity
+Highlights distribution of graft types by donor category
+Demonstrates grouped aggregation for BI-style summaries
+
+4. Pipeline Load Validation
+
+```sql
+SELECT
+    'patients' AS table_name,
+    COUNT(*) AS row_count
+FROM patients
+UNION ALL
+SELECT 'transplants', COUNT(*) FROM transplants
+UNION ALL
+SELECT 'donors', COUNT(*) FROM donors
+UNION ALL
+SELECT 'labs', COUNT(*) FROM labs
+UNION ALL
+SELECT 'recipient_demo', COUNT(*) FROM recipient_demo;
+```
+Example Output:
+<img width="324" height="178" alt="Query_4" src="https://github.com/user-attachments/assets/053e3384-5066-49e7-8605-3b8fc48a3cbf" />
+
+### Use Case
+Confirming end-to-end ETL completion and all major tables are loaded.
+Used for diagnosing any QA problems.
 
 ## Dataset Summary (Sample)
 
