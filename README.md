@@ -126,6 +126,7 @@ ORDER BY recipient_id
 LIMIT 5;
 ```
 
+Example Output:
 <img width="1019" height="156" alt="image" src="https://github.com/user-attachments/assets/b05b74de-e5d8-4230-ac2c-5ab374ac9719" />
 
 ### Why this matters
@@ -133,15 +134,24 @@ Validates donor-recipient linkage across tables
 Shows PDF-derived donor data integrated into SQL
 Demonstrates normalized schema design with surrogate keys
 
-3. Lab trends over time
+3. Transplant Volume by Donor and Graft Type
 
 ```sql
-SELECT patient_id, analyte, date_of_lab, AVG(value) as avg_value
-FROM labs
-GROUP BY patient_id, analyte, date_of_lab;
+SELECT
+    tx_donor_type AS donor_type,
+    tx_graft_type AS graft_type,
+    COUNT(*) AS transplant_count
+FROM transplants
+GROUP BY tx_donor_type, tx_graft_type
+ORDER BY transplant_count DESC;
 ```
+Example Output:
+<img width="680" height="328" alt="image" src="https://github.com/user-attachments/assets/4d5646ad-684d-40ac-8a67-d566d23ece93" />
 
-
+### Why this matters
+Summarizes transplant activity by donor/graft category.
+Supports operational dashboards.
+Demonstrates grouped SQL aggregation for BI reporting.
 
 ## Dataset Summary (Sample)
 
