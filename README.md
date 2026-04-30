@@ -72,7 +72,8 @@ This demonstrates integration of unstructured clinical data into the warehouse.
 
 ## Database Schema
 
-<img width="1032" height="807" alt="schema_diagram" src="https://github.com/user-attachments/assets/260c3c18-327c-488a-87da-ac2bb61b29ef" />
+<img width="1032" height="807" alt="schema_diagram" src="https://github.com/user-attachments/assets/02e8341a-8746-4f83-aac1-4366463112b4" />
+
 
 
 ## Example Queries
