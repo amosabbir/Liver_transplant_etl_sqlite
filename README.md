@@ -1,4 +1,4 @@
-# Clinical-data-warehouse-sqlite
+# Clinical_data_warehouse_sqlite
 
 ## Overview
 
