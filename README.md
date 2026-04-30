@@ -143,10 +143,11 @@ SELECT
     COUNT(*) AS transplant_count
 FROM transplants
 GROUP BY tx_donor_type, tx_graft_type
-ORDER BY transplant_count DESC;
+ORDER BY donor_type, transplant_count DESC;
 ```
 Example Output:
-<img width="680" height="328" alt="image" src="https://github.com/user-attachments/assets/4d5646ad-684d-40ac-8a67-d566d23ece93" />
+<img width="678" height="325" alt="Query_3" src="https://github.com/user-attachments/assets/902f4aaf-8955-4d7e-a66d-1c3187322b9c" />
+
 
 ### Why this matters
 Summarizes transplant activity by donor/graft category.
