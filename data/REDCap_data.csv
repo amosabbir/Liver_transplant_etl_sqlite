@@ -1,0 +1,101 @@
+record_id,redcap_repeat_instrument,redcap_repeat_instance,source_patient_id,date_of_birth,date_of_death,bloodtype,blood_rh,sex,date_of_trans,organ,tx_multiorgan,tx_graft_type,tx_donor_type
+1,patient_information,,24249,1952-04-01,,A,+,M,,,,,
+1,transplant_and_donor_information,1,,,,,,,2011-06-20,Liver,0,Whole graft,Living Donor
+2,patient_information,,103984,1946-10-09,2022-05-18,A,+,F,,,,,
+2,transplant_and_donor_information,1,,,,,,,1989-10-13,Liver,0,Left Lobe,Deceased (Unknown)
+3,patient_information,,121643,1951-04-07,,O,+,F,,,,,
+3,transplant_and_donor_information,1,,,,,,,2005-09-18,Liver,0,Split,Deceased (Neurological)
+4,patient_information,,125304,1930-05-21,2000-10-23,O,+,F,,,,,
+4,transplant_and_donor_information,1,,,,,,,1998-08-07,Liver,1,Whole graft,Deceased (Neurological)
+5,patient_information,,140575,1951-04-08,,A,+,M,,,,,
+5,transplant_and_donor_information,1,,,,,,,2019-09-30,Liver,0,Whole graft,Deceased (Cardiovascular)
+6,patient_information,,142387,1951-06-20,,A,-,M,,,,,
+6,transplant_and_donor_information,1,,,,,,,2017-06-17,Liver,1,Split,Deceased (Neurological)
+7,patient_information,,147085,1931-10-01,2002-06-10,O,+,F,,,,,
+7,transplant_and_donor_information,1,,,,,,,1995-03-10,Liver,0,Whole graft,Deceased (Neurological)
+8,patient_information,,151031,,1988-08-22,,,F,,,,,
+8,transplant_and_donor_information,1,,,,,,,1988-07-15,Liver,1,Right Lobe,Deceased (Unknown)
+9,patient_information,,159905,1946-09-24,,A,+,F,,,,,
+9,transplant_and_donor_information,1,,,,,,,2007-08-16,Liver,0,Whole graft,Deceased (Neurological)
+10,patient_information,,170556,1947-04-14,2015-05-17,A,+,M,,,,,
+10,transplant_and_donor_information,1,,,,,,,2006-08-14,Liver,0,Split,Living Donor
+10,transplant_and_donor_information,2,,,,,,,2009-06-27,Liver,0,Split,Deceased (Cardiovascular)
+11,patient_information,,175608,1947-04-16,2011-01-28,O,+,M,,,,,
+11,transplant_and_donor_information,1,,,,,,,2006-04-08,Liver,0,Whole graft,Deceased (Neurological)
+12,patient_information,,178589,1950-05-28,2011-05-25,O,-,M,,,,,
+12,transplant_and_donor_information,1,,,,,,,2010-07-16,Liver,0,Whole graft,Deceased (Neurological)
+13,patient_information,,181180,1944-06-11,,B,+,F,,,,,
+13,transplant_and_donor_information,1,,,,,,,2006-04-13,Liver,0,Right Lobe,Deceased (Neurological)
+14,patient_information,,190533,1930-06-08,2006-08-09,B,+,F,,,,,
+14,transplant_and_donor_information,1,,,,,,,1995-03-10,Liver,0,Whole graft,Deceased (Neurological)
+15,patient_information,,202734,1954-01-11,2013-03-04,A,+,M,,,,,
+15,transplant_and_donor_information,1,,,,,,,1998-05-08,Liver,0,Whole graft,Deceased (Neurological)
+16,patient_information,,203406,1947-11-30,2021-09-14,O,+,M,,,,,
+16,transplant_and_donor_information,1,,,,,,,2007-05-07,Liver,0,Whole graft,Deceased (Neurological)
+17,patient_information,,210263,1947-03-14,2005-06-18,O,+,M,,,,,
+17,transplant_and_donor_information,1,,,,,,,2002-09-21,Liver,0,Whole graft,Deceased (Neurological)
+18,patient_information,,214975,1936-12-28,2015-11-05,O,+,F,,,,,
+18,transplant_and_donor_information,1,,,,,,,2001-02-15,Liver,1,Whole graft,Deceased (Neurological)
+19,patient_information,,225369,1932-08-23,2007-11-07,A,+,M,,,,,
+19,transplant_and_donor_information,1,,,,,,,1991-01-03,Liver,0,Whole graft,Deceased (Neurological)
+20,patient_information,,228088,1951-03-20,,AB,+,F,,,,,
+20,transplant_and_donor_information,1,,,,,,,2014-08-31,Liver,0,Whole graft,Deceased (Neurological)
+21,patient_information,,229208,1949-06-03,,O,-,F,,,,,
+21,transplant_and_donor_information,1,,,,,,,2016-12-21,Liver,0,Whole graft,Deceased (Neurological)
+22,patient_information,,243441,1942-03-30,2011-11-27,O,+,M,,,,,
+22,transplant_and_donor_information,1,,,,,,,2008-12-16,Liver,0,Whole graft,Deceased (Neurological)
+23,patient_information,,245412,1931-04-09,2005-07-02,A,+,F,,,,,
+23,transplant_and_donor_information,1,,,,,,,1995-06-04,Liver,0,Whole graft,Deceased (Neurological)
+24,patient_information,,248174,1935-04-16,2013-10-14,O,+,F,,,,,
+24,transplant_and_donor_information,1,,,,,,,1991-09-09,Liver,0,Whole graft,Deceased (Neurological)
+25,patient_information,,253630,,1987-10-31,,,F,,,,,
+25,transplant_and_donor_information,1,,,,,,,1987-10-30,Liver,0,Whole graft,Deceased (Unknown)
+26,patient_information,,256766,1954-01-23,2017-01-14,O,+,M,,,,,
+26,transplant_and_donor_information,1,,,,,,,1998-09-20,Liver,0,Split,Deceased (Neurological)
+26,transplant_and_donor_information,2,,,,,,,1999-07-19,Liver,0,Whole graft,Deceased (Cardiovascular)
+27,patient_information,,267572,1936-06-23,2007-10-12,B,+,M,,,,,
+27,transplant_and_donor_information,1,,,,,,,1996-05-18,Liver,0,Whole graft,Deceased (Neurological)
+28,patient_information,,267655,1942-06-22,2003-07-03,A,-,F,,,,,
+28,transplant_and_donor_information,1,,,,,,,2003-05-21,Liver,0,Whole graft,Living Donor
+29,patient_information,,272424,1949-01-21,2020-12-04,A,+,M,,,,,
+29,transplant_and_donor_information,1,,,,,,,2007-11-06,Liver,0,Whole graft,Deceased (Neurological)
+30,patient_information,,274137,1940-05-29,2005-06-11,O,+,M,,,,,
+30,transplant_and_donor_information,1,,,,,,,2004-08-06,Liver,0,Split,Deceased (Neurological)
+31,patient_information,,285429,1942-12-17,2014-08-26,A,+,M,,,,,
+31,transplant_and_donor_information,1,,,,,,,2000-04-20,Liver,1,Whole graft,Deceased (Neurological)
+32,patient_information,,286709,,1990-06-05,,,M,,,,,
+32,transplant_and_donor_information,1,,,,,,,1990-03-09,Liver,0,Left Lobe,Deceased (Unknown)
+33,patient_information,,290378,1950-12-22,,O,+,M,,,,,
+33,transplant_and_donor_information,1,,,,,,,2017-03-16,Liver,0,Whole graft,Deceased (Neurological)
+34,patient_information,,291789,1948-09-05,2021-04-16,A,+,M,,,,,
+34,transplant_and_donor_information,1,,,,,,,1989-11-17,Liver,0,Right Lobe,Deceased (Unknown)
+35,patient_information,,295229,1952-08-12,2006-05-04,A,+,F,,,,,
+35,transplant_and_donor_information,1,,,,,,,2004-01-19,Liver,0,Split,Living Donor
+36,patient_information,,297832,1953-08-13,2024-08-05,A,+,M,,,,,
+36,transplant_and_donor_information,1,,,,,,,2021-04-16,Liver,0,Whole graft,Deceased (Neurological)
+37,patient_information,,301913,1935-09-27,,,,M,,,,,
+37,transplant_and_donor_information,1,,,,,,,1995-05-19,Liver,0,Whole graft,Deceased (Unknown)
+38,patient_information,,315840,,1994-07-12,,,F,,,,,
+38,transplant_and_donor_information,1,,,,,,,1994-07-09,Liver,0,Left Lobe,Deceased (Unknown)
+39,patient_information,,324158,,1998-04-01,,,F,,,,,
+39,transplant_and_donor_information,1,,,,,,,1988-07-16,Liver,1,Right Lobe,Deceased (Unknown)
+40,patient_information,,335828,,1993-07-07,,,F,,,,,
+40,transplant_and_donor_information,1,,,,,,,1993-07-01,Liver,0,Split,Deceased (Unknown)
+41,patient_information,,343388,1953-09-14,2022-06-22,A,+,M,,,,,
+41,transplant_and_donor_information,1,,,,,,,2002-10-31,Liver,0,Split,Deceased (Neurological)
+42,patient_information,,345667,,2001-05-13,O,+,M,,,,,
+42,transplant_and_donor_information,1,,,,,,,1996-01-23,Liver,1,Whole graft,Deceased (Unknown)
+43,patient_information,,355168,1955-01-30,2016-12-06,O,+,M,,,,,
+43,transplant_and_donor_information,1,,,,,,,2004-05-27,Liver,1,Left Lobe,Deceased (Unknown)
+44,patient_information,,359372,1952-08-04,2019-06-09,A,+,M,,,,,
+44,transplant_and_donor_information,1,,,,,,,1999-11-18,Liver,1,Whole graft,Deceased (Neurological)
+45,patient_information,,359524,1942-07-18,,O,+,F,,,,,
+45,transplant_and_donor_information,1,,,,,,,2005-07-29,Liver,1,Whole graft,Deceased (Neurological)
+46,patient_information,,362569,1954-01-17,2012-03-12,A,+,M,,,,,
+46,transplant_and_donor_information,1,,,,,,,2005-07-09,Liver,0,Split,Deceased (Neurological)
+47,patient_information,,363040,1953-05-11,2002-03-21,A,-,M,,,,,
+47,transplant_and_donor_information,1,,,,,,,2000-07-25,Liver,0,Whole graft,Deceased (Neurological)
+48,patient_information,,372265,,1999-02-16,O,+,M,,,,,
+48,transplant_and_donor_information,1,,,,,,,1998-11-26,Liver,0,Left Lobe,Deceased (Unknown)
+49,patient_information,,372790,1942-08-26,,O,+,M,,,,,
+49,transplant_and_donor_information,1,,,,,,,2004-01-20,Liver,0,Whole graft,Deceased (Neurological)
