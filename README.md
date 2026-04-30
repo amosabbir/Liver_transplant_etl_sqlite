@@ -1,4 +1,4 @@
-# Clinical_data_warehouse_sqlite
+# Clinical data warehouse SQlite
 
 ## Overview
 
@@ -192,6 +192,10 @@ The sample preserves schema and query patterns while reducing size for portabili
 All data in this repository is synthetic or de-identified and does not contain protected health information (PHI).
 Identifiers have been removed or replaced, and dates may be shifted while preserving temporal relationships for analysis.
 
+## How to run
+pip install -r requirements.txt
+python run_pipeline.py
+
 
 ## Repository Structure
 
@@ -207,8 +211,8 @@ Identifiers have been removed or replaced, and dates may be shifted while preser
 
 
 ## Key Takeaways
-* Designed a clinical data warehouse for longitudinal patient data
-* Built a modular ETL pipeline for messy, multi-source healthcare data
-* Modeled time-series lab data for flexible analysis
-* Integrated structured and unstructured data into a unified system
+* Designed a relational clinical database for longitudinal transplant data
+* Built a modular ETL pipeline integrating REDCap, EPIC, and PDF sources
+* Transformed wide clinical data into analysis-ready long format
+* Enabled SQL-based analytics on structured and unstructured healthcare data
 
