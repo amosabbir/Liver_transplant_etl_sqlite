@@ -103,19 +103,33 @@ Showing a subset of patients and analytes for readability.
 <img width="603" height="440" alt="Query_1" src="https://github.com/user-attachments/assets/bd68021c-0ca2-4200-8205-335d90e8f21f" />
 
 ### Why this matters
-Identifies most recent clinical values per patient
-Handles longitudinal lab data efficiently
-Demonstrates use of window functions, a key SQL skill in analytics and BI
-Forms the basis for dashboards, cohort definitions, and ML feature engineering
+Identifies most recent clinical values per patient.
+Handles longitudinal lab data efficiently.
+Demonstrates use of window functions, a key SQL skill in analytics and BI.
+Forms the basis for dashboards, cohort definitions, and ML feature engineering.
 
-2. Donor–recipient linkage
+2. Donor–Recipient Linkage from Parsed PDF Charts
 
 ```sql
-SELECT t.transplant_id, p.patient_id, d.donor_id, t.tx_graft_type
+SELECT
+    t.transplant_id AS tx_id,
+    t.patient_id AS recipient_id,
+    p.source_patient_id AS donor_id,
+    t.date_of_trans AS tx_date,
+    t.organ,
+    t.tx_graft_type AS graft_type,
+    t.tx_donor_type AS donor_type
 FROM transplants t
-JOIN patients p ON t.patient_id = p.patient_id
-LEFT JOIN donors d ON t.donor_id = d.donor_id;
+JOIN donors d ON t.donor_id = d.donor_id
+JOIN patients p ON d.patient_id = p.patient_id
+ORDER BY recipient_id
+LIMIT 5;
 ```
+
+### Why this matters
+Validates donor-recipient linkage across tables
+Shows PDF-derived donor data integrated into SQL
+Demonstrates normalized schema design with surrogate keys
 
 3. Lab trends over time
 
