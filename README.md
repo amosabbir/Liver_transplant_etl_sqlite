@@ -185,23 +185,16 @@ Example Output:
 
 ## Dataset Summary (Sample)
 
-This repository includes a de-identified sample dataset:
-
-* Patients: ~1,000
-* Transplants: ~1,200
-* Labs: ~50,000 rows
-
-The sample preserves schema and query patterns while reducing size for portability.
-
-### Data Privacy
-
-All data in this repository is synthetic or de-identified and does not contain protected health information (PHI).
-Identifiers have been removed or replaced, and dates may be shifted while preserving temporal relationships for analysis.
+* This repository includes a small synthetic sample dataset for reproducibility.
+* The sample preserves schema and query patterns while reducing size for portability.
+* All data in this repository is synthetic and does not contain protected health information (PHI).
+* Dates may are generated while preserving temporal relationships for analysis.
 
 ## How to run
+```
 pip install -r requirements.txt
 python run_pipeline.py
-
+```
 
 ## Repository Structure
 
