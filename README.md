@@ -1,4 +1,5 @@
-# Clinical data warehouse SQlite
+# Liver transplant data warehouse SQlite
+A modular ETL pipeline that transforms multi-source clinical data (REDCap, EPIC, PDFs) into a normalized SQLite database for analytics.
 
 ## Overview
 
@@ -68,6 +69,10 @@ An OCR-based ETL step is included to extract laboratory values from synthetic cl
 This demonstrates integration of unstructured clinical data into the warehouse.
 
 
+
+## Database Schema
+
+<img width="1032" height="807" alt="schema_diagram" src="https://github.com/user-attachments/assets/260c3c18-327c-488a-87da-ac2bb61b29ef" />
 
 
 ## Example Queries
