@@ -126,6 +126,8 @@ ORDER BY recipient_id
 LIMIT 5;
 ```
 
+<img width="1019" height="156" alt="image" src="https://github.com/user-attachments/assets/b05b74de-e5d8-4230-ac2c-5ab374ac9719" />
+
 ### Why this matters
 Validates donor-recipient linkage across tables
 Shows PDF-derived donor data integrated into SQL
