@@ -1,4 +1,4 @@
-# Liver transplant data warehouse SQlite
+# Liver Transplant Data Warehouse SQlite
 A modular ETL pipeline that transforms multi-source clinical data (REDCap, EPIC, PDFs) into a normalized SQLite database for analytics.
 
 ## Overview
@@ -8,7 +8,7 @@ A lightweight clinical data warehouse built in SQLite with a Python ETL pipeline
 This project demonstrates end-to-end data engineering: schema design, ETL processing, and analytical querying on real-world clinical data structures.
 
 ```
-EPIC (Oracle) ─┐
+EPIC (EHR)    ─┐
 REDCap ────────├──> Python ETL (pandas) ───> SQLite Database ───> SQL Queries / Analysis
 PDF docs ──────┘                     
 ```
@@ -27,6 +27,12 @@ The schema is designed to support longitudinal clinical data and transplant even
 * labs: long-format laboratory data (time-series)
 * recipient_demo: demographic extension (1:1 with patients)
 * notes: optional unstructured clinical notes
+
+
+## Database Schema
+
+<img width="1032" height="807" alt="schema_diagram" src="https://github.com/user-attachments/assets/02e8341a-8746-4f83-aac1-4366463112b4" />
+
 
 ### Key Design Decisions
 * Surrogate keys (patient_id, transplant_id, donor_id)
@@ -70,12 +76,6 @@ This demonstrates integration of unstructured clinical data into the warehouse.
 
 
 
-## Database Schema
-
-<img width="1032" height="807" alt="schema_diagram" src="https://github.com/user-attachments/assets/02e8341a-8746-4f83-aac1-4366463112b4" />
-
-
-
 ## Example Queries
 
 1. Latest Lab Value per Patient (Window Function)
@@ -109,10 +109,10 @@ Showing a subset of patients and analytes for readability.
 <img width="603" height="440" alt="Query_1" src="https://github.com/user-attachments/assets/bd68021c-0ca2-4200-8205-335d90e8f21f" />
 
 ### Use Case
-Identifies most recent clinical values per patient.
-Handles longitudinal lab data efficiently.
-Demonstrates use of window functions, a key SQL skill in analytics and BI.
-Forms the basis for dashboards, cohort definitions, and ML feature engineering.
+* Identifies most recent clinical values per patient.
+* Handles longitudinal lab data efficiently.
+* Demonstrates use of window functions, a key SQL skill in analytics and BI.
+* Forms the basis for dashboards, cohort definitions, and ML feature engineering.
 
 2. Donor–Recipient Linkage from Parsed PDF Charts
 
@@ -136,9 +136,9 @@ Example Output:
 <img width="1019" height="156" alt="image" src="https://github.com/user-attachments/assets/b05b74de-e5d8-4230-ac2c-5ab374ac9719" />
 
 ### Use Case
-Validates donor-recipient linkage across tables
-Shows PDF-derived donor data integrated into SQL
-Demonstrates normalized schema design with surrogate keys
+* Validates donor-recipient linkage across tables
+* Shows PDF-derived donor data integrated into SQL
+* Demonstrates normalized schema design with surrogate keys
 
 3. Transplant Volume by Donor and Graft Type
 
@@ -156,9 +156,9 @@ Example Output:
 
 
 ### Use Case
-Supports operational reporting of transplant activity
-Highlights distribution of graft types by donor category
-Demonstrates grouped aggregation for BI-style summaries
+* Supports operational reporting of transplant activity
+* Highlights distribution of graft types by donor category
+* Demonstrates grouped aggregation for BI-style summaries
 
 4. Pipeline Load Validation
 
@@ -180,8 +180,8 @@ Example Output:
 <img width="324" height="178" alt="Query_4" src="https://github.com/user-attachments/assets/053e3384-5066-49e7-8605-3b8fc48a3cbf" />
 
 ### Use Case
-Confirming end-to-end ETL completion and all major tables are loaded.
-Used for diagnosing any QA problems.
+* Confirming end-to-end ETL completion and all major tables are loaded.
+* Used for diagnosing any QA problems.
 
 ## Dataset Summary (Sample)
 
